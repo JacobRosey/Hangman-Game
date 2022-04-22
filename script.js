@@ -150,7 +150,13 @@ var app = new function(){
 
     this.guess = function(guess){
         if(this.category){
-            this.animateGuess(guess);
+            
+            //Prevent multiple clicks on same guess from subtracting from guesses left
+            let guessClick = document.getElementById('char-'+guess+'');
+            if(guessClick.hasAttribute('onclick')){
+                guessClick.removeAttribute('onclick')
+            }
+            this.animateGuess(guess); 
             if(guess == "Space"){
                 guess = " ";
             }
