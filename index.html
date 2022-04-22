@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hangman Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h2 class="header">Hangman Game</h2>
+        <div class="category">
+            <div id="choose-category">
+                <button id="state-btn" onClick="app.setCategory('States')">U.S. States</button>
+                <button id="fruit-btn" onClick="app.setCategory('Fruits')">Fruits</button>
+                <h4 id="category-header">Current Category: None Chosen!</h4>
+                <p style="font-style: italic;">Note: Changing difficulty or category will start a new game</p>
+                <div class="new-game">
+                    <button class ="selected-btn" id="easy-btn" onClick="app.setDifficulty('easy')">Easy</button>
+                    <button id="hard-btn" onClick="app.setDifficulty('hard')">Hard</button>
+                </div>
+            </div>
+        </div>
+        <div class="alphabet" id="board">
+            
+        </div>
+
+        <div class="answer">
+            <p id="guesses-left"></p> 
+            <button id="new-game-btn"onClick="app.newGame()">New Game</button>
+            <div id="blanks">
+
+            </div>
+        </div>
+
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+@-webkit-keyframes drop-fade{
+    from {top: 0px;}
+    to {top: 200px;
+        opacity: 0;
+        visibility: hidden;}
+}
+@keyframes drop-fade{
+    from {top: 0px;}
+    to {top: 200px;
+        transform: translateY(150px);
+        opacity: 0;
+        visibility: hidden;}
+}
+
+body{
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+h2{
+    color: blue;
+    text-align: center;
+    margin-top: 1em;
+}
+
+h4{
+    color: black;
+    font-weight: bold;
+}
+
+.category{
+    display: flex;
+    margin-left: 8em;
+    margin-top: 2em;
+    width: 80em;
+    text-align: center;
+    #choose-category{
+        float: left;
+        margin-left: 1em;
+        background-color: whitesmoke;
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 1em;
+        text-align: center;
+
+        .selected-btn{
+            border-radius: 10px;
+            padding: .75em;
+            background-color: rgb(58, 206, 38);
+            margin: .5em;
+        }
+        
+    }
+}
+
+#board{
+    display: grid;
+    grid-template-columns: repeat(28, 25px);
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: blue;
+
+    p{
+        cursor: pointer;
+        font-size: 1.75em;
+    }
+}
+button{
+    border-radius: 10px;
+    padding: .75em;
+    background-color: rgb(206, 206, 38);
+    margin: .5em;
+}
+.answer{
+    display: block;
+    border: solid black 1px;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 1em;
+    height: 11em;
+    width: auto;
+    text-align: center;
+    background-color:whitesmoke;
+    margin-bottom: 5em;
+
+    #guesses-left{
+        float: left;
+        margin-left: 2em;
+        font-weight: bold;
+    }
+    #blanks{
+        display: inline-block;
+        width: 28em;
+        margin-top: 3.5em;
+        margin-left: 5em;
+        font-size: large;
+    }
+    #new-game-btn{
+        float: right;
+        margin-top: 1em;
+        margin-right: 1em;
+        background-color: rgb(55, 55, 231);
+        color: whitesmoke;
+    }
+}
