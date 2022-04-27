@@ -1,6 +1,6 @@
 # Hangman-Game
 Simple Hangman Game 
 
-Open with live server to play, view browser console to cheat :)
+Open index.html with live server to play, inspect browser console to cheat 
 
-Didn't make it responsive, just resize window until it looks okay
+Built with just HTML/CSS/Javascript
