@@ -36,6 +36,7 @@ var app = new function(){
         }
     };
 
+    //Only sets new answer if a guess was already used
     this.setDifficulty = function(diff){
         let guessHtml = document.getElementById('guesses-left');
         let easyBtn = document.getElementById('easy-btn');
@@ -124,9 +125,9 @@ var app = new function(){
                 index = Math.floor(Math.random()* states.length);
                 this.answer = states[index].toUpperCase();
 
-                //This should work but it doesn't?? Find a better way to do it
+                //This should work... but it doesn't
                 if(this.answer === this.prevAnswer){
-                    console.log('Two similar answers in a row. Setting new answer');
+                    console.log('Same answer twice in a row. Setting new answer');
                     this.setAnswer();
                 } else this.setAnswerBlanks();
             break;
@@ -137,7 +138,7 @@ var app = new function(){
                 index = Math.floor(Math.random()* fruits.length);
                 this.answer = fruits[index].toUpperCase();
 
-                //This should work but it doesn't??
+                //This should work... but it doesn't
                 if(this.answer === this.prevAnswer){
                     console.log('Two similar answers in a row. Setting new answer');
                     this.setAnswer();
@@ -212,7 +213,7 @@ var app = new function(){
         boardCharacter.style.animationFillMode = "forwards";
     };
     this.celebrate = function(){
-        //Add a simple, cool animation here for when someone wins
+        //Add an animation here for when game is won
         
     };
     
